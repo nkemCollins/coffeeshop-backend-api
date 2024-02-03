@@ -1,0 +1,51 @@
+### Create a new user
+POST http://localhost:3000/auth/signup
+Content-type: application/json
+
+{
+    "firstname":"leke",
+    "lastname":"collins",
+    "email":"lekeaka@gmail.com",
+    "password":"qwerty"
+}
+
+### Signin user
+POST http://localhost:3000/auth/signin
+Content-type: application/json
+
+{
+    "email":"lekea@gmail.com",
+    "password":"qwerty"
+}
+
+### Find a user with a given id
+GET http://localhost:3000/auth/65807ba2bbb8e19541d66f4f
+
+### Find all users with a given email
+GET http://localhost:3000/auth?email=fatbitch@gmail.com
+
+### Delete a user with a given id
+DELETE http://localhost:3000/auth/65807ba2bbb8e19541d66f4f
+
+### Update a user
+PATCH http://localhost:3000/auth/6581d80a42dda1c93acf1e94
+Content-type: application/json
+
+{
+    "email":"false@gmail.com"
+}
+
+
+### get currently signed in user
+GET http://localhost:3000/auth/whoami
+
+### Sign out
+POST  http://localhost:3000/auth/signout
+
+### Set admin
+PATCH http://localhost:3000/test/6581d80a42dda1c93acf1e94
+Content-type: application/json
+
+{
+    "admin":true
+}
